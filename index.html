@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <!-- aframeフレームワークのjsを読み込む -->
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  
-  <title>A-Frame</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- footerFixed.js -->
+    <script type="text/javascript" src="js/footerFixed.js"></script>
+    <!-- A-frame JS -->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <title>title</title>
 </head>
+
 <body>
-<a-scene>
-        <a-box position="0 1 -2"
-               rotation="0 45 25"
-               color="#f00"
-               scale="1 1 1"></a-box>
-    </a-scene>
-</body>
-</html>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a-scene loading-screen="dotsColor: red; backgroundColor: black">
+                        <a-assets>
+                            <video id="antarctica" autoplay loop="true" src="video/test.mp4"> </video>
+                        </a-assets>
+
+                        <!-- Using the asset management system. -->
+                        <a-videosphere src="#antarctica"></a-videosphere>
+
+                        <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+                        <a-videosphere src="video/test.mp4"></a-videosphere>
+                        <!--
+                        <a-box position="0 1 -2" rotation="0 45 25" color="#f00" scale="1 1 1"></a-box>
+                        -->
+                    </a-scene>
+                </div>
+            </div>
+            <div>aaaaa</div>
+        </div>
+    </main>
+    <footer id="footer">
+        <dv class="container footer-content">
+            <div class="row">
+                <div class="col-lg-12">© 2020 <a href="https://github.com/BinS57/pro10th" target="_blank">BinS</a>
+                </div>
+            </div>
+    </footer>
+    <!--Coostrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body></html>
